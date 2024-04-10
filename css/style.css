@@ -1,0 +1,612 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: #D03E18, #7EA3AC
+- Tints:
+#d96546 - #d8e3e6
+#e89f8c - #f2f6f7
+#f1c5ba
+#faece8
+
+- Shades: 
+        - #263134
+        - #3f5256
+- Accents:
+- Greys
+
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
+#555
+#333
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem #e89f8c;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #1F1F1F;
+    font-family: 'Noto serif', 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    position: absolute;
+}
+
+ion-icon[name="chevron-up-sharp"] {
+    position: absolute;
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: #fff;
+    padding: 2.4rem;
+    background-color: rgba(100, 136, 145, 0.45);
+    border-radius: 50%;
+    /* top: 50%; */
+    right: 5%;
+    bottom: 5%;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.greek-gods {
+    margin-bottom: 3.2rem;
+}
+
+.ares {
+    margin-bottom: 0;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.overview {
+    color: #192122;
+    font-size: 1.6rem;
+    padding: 3.2rem 0;
+    line-height: 1.6;
+}
+
+.role {
+    background-color: #d8e3e6;
+    padding: 2.4rem;
+    border-radius: 8px;
+}
+
+.role-header {
+    display: inline-block;
+    color: #648891;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-bottom: 1.4rem;
+}
+
+.role-description {
+    color: #263134;
+}
+
+.myth-img {
+    max-width: 100%;
+}
+
+/* REUSABLE GRIDS */
+
+.grid-2-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+    align-items: center;
+}
+
+/* HELPER CLASSES */
+
+.margin-left-sm {
+    margin-right: 1.4rem;
+}
+
+
+
+/* SECTION STYLING */
+
+.hero-section {
+    height: 100vh;
+    background-image: linear-gradient(
+      to right, rgba(208, 61, 24, 0.459),
+      rgba(126, 163, 172, 0.11)
+    ),
+    url("../asset/img/Demeter.webp");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+.hero-text-box {
+    max-width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -50%);
+}
+
+.primary-header {
+    font-size: 8rem;
+    font-weight: 500;
+    color: #fff;
+    /* font-family: 'Noto serif' serif; */
+    font-family: Noto Serif Display;
+    line-height: 0.9;
+    letter-spacing: 0.1px;
+}
+
+.primary-header-description {
+    font-size: 2.8rem;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;;
+    color: #fff;
+    padding: 2.4rem 0;
+    line-height: 1.5;
+}
+
+.hero-btn {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.hero-btn .btn a:link,
+.hero-btn .btn a:visited {
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 1.6rem 3.2rem;
+    font-weight: 700;
+}
+
+.btn {
+    background-color: #d96546;
+    color: #f2f6f7;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    color: #D03E18;
+    background-color: #f2f6f7;
+    border: none;
+}
+
+.hero-btn-subscribe {
+    background: none;
+    color: #f2f6f7;
+}
+
+.hero-btn-subscribe:hover {
+    background: none;
+}
+
+
+.learning-link:link,
+.learning-link:visited {
+    color: #fff;
+}
+
+.learning-link:hover,
+.learning-link:active {
+    color: #D03E18;
+}
+
+.subscribe-link:link,
+.subscribe-link:visited {
+    color: #fff;
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.subscribe-link:hover,
+.subscribe-link:active {
+    color: #fff;
+    text-decoration: underline;
+    background: none;
+}
+
+
+/* SIDEBAR SECTION */
+
+.sid-bar {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    /* gap: 4.8rem; */
+    height: 100vh;
+}
+
+.TOC {
+    overflow: hidden;
+}
+
+.table-of-content {
+    background-color: #D03E18;
+    height: 100vh;
+}
+
+.toc-header {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding: 2.4rem;
+}
+
+.content-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 0 2.4rem;
+}
+
+.content-list-items {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1.2rem;
+}
+
+
+.table-of-content a:link,
+.table-of-content a:visited {
+    display: inline-block;
+    color: #f2f6f7;
+    font-size: 1.6rem;
+}
+
+.table-of-content a:hover,
+.table-of-content a:active {
+    font-weight: 700;
+}
+
+.scroll {
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+
+
+/* INTRODUCTION SECTION */
+
+.introduction-section {
+    padding: 6.4rem 3.2rem 0 3.2rem;
+}
+
+.explaining-greek-myth {
+    padding-bottom: 3.2rem;
+}
+
+.secondary-heading {
+    color: #7EA3AC;
+    font-size: 4.8rem;
+    font-family: 'Noto Serif Display', serif;
+    font-weight: 500;
+    padding-bottom: 2.4rem;
+}
+
+.intro-paragraph {
+    color: #192122;
+    font-size: 2rem;
+    line-height: 1.8;
+    padding: 3.2rem 0 0 0;
+}
+
+.intro-paragraph::first-letter {
+    color: #D03E18;
+    font-size: 9.6rem;
+    font-weight: 700;
+    font-family: inherit;
+    float: left;
+    margin-right: 1.2rem;
+    margin-bottom: 0;
+}
+
+.intro-video-section {
+    padding-bottom: 6.4rem;
+}
+
+.myth-video {
+    display: inline-block;
+    width: 100%;
+}
+
+
+/* GREEK gods SECTION */
+
+.greek-gods-section {
+    /* background-color: #e5edee; */
+    background-color: #f2f6f7;
+    padding: 6.4rem 3.2rem;
+}
+
+.starting {
+    padding: 3.2rem 0;
+}
+
+.starting-paragraph {
+    font-size: 1.8rem;
+    margin-bottom: 2.4rem;
+}
+
+.tertiary-header {
+    color: #d96546;
+    font-size: 3.2rem;
+    font-family: 'Noto Serif Display', serif;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+}
+
+
+/* SUBSCRIBE SECTION */
+
+.cta-section {
+    margin: 6.4rem;
+    /* height: 100%; */
+    background-image: linear-gradient(to right bottom, rgba(63, 81, 85, 0.37), #648891);
+    border-radius: 8px;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    border-radius: 11px;
+    overflow: hidden;
+}
+
+.cta-description {
+    margin-bottom: 3.2rem;
+}
+
+.cta-heading {
+    color: #d96546;
+    font-size: 3.2rem;
+    font-family: 'Rubik', serif;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+    line-height: 1.3;
+}
+
+.cta-paragraph {
+    font-size: 1.6rem;
+    color: #f2f6f7;
+    line-height: 1.6;
+}
+
+.cta-text-box {
+    grid-column: 2/3;
+    grid-row: 1;
+    padding: 3.2rem;
+} 
+
+.cta-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.label {
+    display: block;
+    color: #d8e3e6;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.cta-input {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: #d8e3e6;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-input::placeholder {
+    color: #a9c3ca;
+}
+
+.click-to-subscribe-btn {
+    background-color: #d96546;
+    color: #d8e3e6;
+    cursor: pointer;
+    border: none;
+    align-self: end;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1.2rem;
+    padding: 1.2rem;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.click-to-subscribe-btn:hover {
+    color: #d96546;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-img-box {
+    grid-column: 1/2;
+    grid-row: 1;
+    height: 100%;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(208, 61, 24, 0.463),
+        rgba(124, 162, 171, 0.557)
+      ),
+      url("../asset/img/zeusbg.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-section *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem #e89f8c;
+  }
+
+
+  /* OTHER gods SECTION */
+
+  .other-greek-gods {
+    padding: 6.4rem 3.2rem;
+    background-color: #fff;
+    font-family: "Rubik", sans-serif;
+}
+
+.other-greek-gods .secondary-heading {
+    color: #d96546;
+    text-align: center;
+    font-family: inherit;
+    font-weight: 600;
+  }
+
+  .other-greek-god-paragraph {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #3f5256;
+    margin-bottom: 3.2rem;
+    line-height: 1.7;
+  }
+
+  .other-gods-header {
+    display: block;
+    text-align: center;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #7EA3AC;
+    margin-bottom: 1.4rem;
+  }
+
+  .male-gods, .female-gods {
+    align-self: start;
+    justify-self: center;
+  }
+
+  .god-table {
+    color: #263134;
+    font-size: 1.2rem;
+    /* border-collapse: collapse; */
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .table-head-row {
+    font-weight: 500;
+    color: #263134;
+    line-height: 1.3;
+  }
+
+  .table-head-row th, .table-body tr td {
+    padding: 1.4rem;
+  }
+
+
+  .male-god-table .table-head, .female-god-table .table-head {
+    background-color: #d8e3e6;
+  }
+
+  .male-god-table tr td:nth-child(odd), .female-god-table tr td:nth-child(odd)  {
+    background-color: #d8e3e6;
+    color: #1F1F1F;
+  }
+  
+  .male-god-table tr td:nth-child(even) {
+    background-color: #98b5bd;
+    color: #fff;
+  }
+
+  .female-god-table tr td:nth-child(even) {
+    background-color: #e38b74;
+    color: #fff;
+  }
+
+  .male-female-gods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+  }
+
+
+  /* FOOTER SECTION */
+
+  .footer {
+    padding: 3.2rem;
+  }
+
+  .copyright {
+    color: #3f5256;
+    text-align: center;
+    font-size: 1.2rem;
+  }

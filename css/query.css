@@ -1,0 +1,355 @@
+/* rem and em do not depend on html font-size in media queries!
+instead 1rem = 1em = 16px */
+
+
+/**********************/
+/* BELOW 1344PX (smaller desktops) */
+/**********************/
+
+@media (max-width: 84em) {
+    html {
+        font-size: 62.5%;
+    }
+
+    .primary-header {
+        font-size: 8.6rem;
+    }
+}
+
+/**********************/
+/* BELOW 1200pX (Landscape ipads) */
+/**********************/
+
+@media (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .primary-header {
+        font-size: 7.2rem;
+    }
+
+    .overview {
+        padding: 2.4rem 0;
+        font-size: 1.4rem;
+    }
+
+    .role-description {
+        font-size: 1.2rem;
+    }
+
+    .cta-text-box {
+        padding: 3.2rem;
+    }
+
+    .cta-heading {
+        font-size: 3rem;
+    }
+
+    .cta-description {
+        margin-bottom: 2.4rem;
+    }
+    
+    .cta-paragraph {
+        font-size: 1.4rem;
+    }
+
+    .label {
+        font-size: 1.4rem;
+    }
+}
+
+/**********************/
+/* BELOW 944pX (Landscape ipads) */
+/**********************/
+
+@media (max-width: 59em) {
+
+    .primary-header {
+        font-size: 7.8rem;
+    }
+
+    .tertiary-header {
+        color: #d96546;
+    }
+
+    .hero-btn .btn a:link,
+    .hero-btn .btn a:visited {
+        font-size: 2rem;
+    }
+
+    .toc-header {
+        font-size: 2.0rem;
+    }
+
+    .table-of-content {
+        font-size: 1.4rem;
+    }
+
+    .intro-paragraph {
+        font-size: 1.8rem;
+    }
+
+    .overview {
+        font-size: 1.2rem;
+    }
+
+    .cta-heading {
+        font-size: 2.6rem;
+    }
+}
+
+
+/**********************/
+/* BELOW 768pX (smaller tablets) */
+/**********************/
+
+@media (max-width: 48em) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .hero-section {
+        background-image: linear-gradient(
+        to right bottom, rgba(104, 30, 12, 0.6),
+        rgba(0, 0, 0, 0.429)
+        ),
+        url("../img/Demeter.jpg");
+    }
+
+    .hero-text-box {
+        text-align: center;
+        max-width: 80%;
+        top: 50%;
+        left: 0;
+        transform: translate(10%, -50%);
+    }
+
+    .hero-btn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .primary-header {
+        font-size: 8.2em;
+    }
+
+    .starting .secondary-heading {
+        font-size: 4.8rem;
+    }
+
+    .tertiary-header {
+        font-size: 4rem;
+    }
+
+    .starting {
+        margin-bottom: 3.2rem;
+    }
+
+    .starting-paragraph {
+        font-size: 2.4rem;
+        margin-top: 2.4rem;
+    }
+
+    .sid-bar {
+        grid-template-columns: 1.6fr 5.4fr;
+    }
+
+    .table-of-content {
+        font-size: 1.6rem;
+    }
+
+    .grid-2-column {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-form {
+        grid-template-columns: 1fr;
+    }
+
+    .male-female-gods {
+        grid-template-columns: 1fr;
+        row-gap: 6.4rem;
+    }
+
+    .toc-header {
+        font-size: 2.4rem;
+    }
+
+    .table-of-content {
+        font-size: 1.6rem;
+    }
+
+    .intro-paragraph {
+        font-size: 1.8rem;
+    }
+
+    .overview {
+        font-size: 1.6rem;
+        margin: 1.6rem 0;
+    }
+
+    .role-description {
+        font-size: 1.6rem;
+    }
+
+    .greek-gods-section {
+        padding: 6.4rem 4.8rem;
+    }
+
+    .greek-gods {
+        margin-bottom: 6.4rem;
+        row-gap: 6.4rem;
+    }
+
+    .greek-gods > div.greek-god-img-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* grid-row: 1/2; */
+    }
+
+    .ares {
+        margin-bottom: 0;
+    }
+
+    .cta-section {
+        margin: 8rem 3.2rem;
+    }
+
+    .cta-paragraph {
+        padding: 1.2rem 0;
+    }
+
+    .god-table {
+        font-size: 1.4rem;
+    }
+
+}
+
+/**********************/
+/* BELOW 544pX (phones) */
+/**********************/
+
+@media (max-width: 34em) {
+    
+    html {
+        font-size: 43.75%;
+    }
+
+    .primary-header {
+        font-size: 6.4rem;
+    }
+
+    .secondary-heading {
+        font-size: 3.2rem;
+    }
+
+    .intro-paragraph {
+        font-size: 1.6rem;
+    }
+
+    .intro-paragraph::first-letter {
+        font-size: 6.4rem;
+    }
+
+    .starting .secondary-heading {
+        font-size: 3.2rem;
+        line-height: 1.2;
+    }
+
+    .starting-paragraph {
+        font-size: 1.8rem;
+        margin-top: 1.2rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .myth-video {
+        height: 100%;
+        max-width: 100%;
+    }
+
+    .toc-header {
+        font-size: 2rem;
+    }
+
+    .content-list {
+        padding: 0 2rem;
+    }
+
+    .table-of-content a:link,
+    .table-of-content a:visited {
+        font-size: 1.4rem;
+    }
+
+    .greek-gods-section {
+        padding: 7.2rem 3.2rem;
+    }
+    
+    .greek-gods {
+        /* margin-bottom: 6.4rem; */
+        row-gap: 6.4rem 0;
+    }
+
+    .overview {
+        font-size: 1.6rem;
+    }
+
+    .role-description {
+        font-size: 1.4rem;
+    }
+
+
+    .ares {
+        margin-bottom: 0;
+    }
+
+    .cta-section {
+        /* background-color: #7EA3AC; */
+        margin: 4.8rem;
+    }
+
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* .cta-heading {
+        color: #e89f8c;
+        text-align: center;
+    } */
+
+    .cta-img-box {
+        height: 32rem;
+        grid-row: 1;
+    }
+
+    .god-table {
+        font-size: 1rem;
+    } 
+
+    .table-head-row th, .table-body tr td {
+        padding: 1.2rem;
+      }
+
+    .male-female-gods {
+        padding: 4.8rem 0;
+        border-bottom: 1px solid #7EA3AC;
+    }
+}
+
+/* 
+-font-sizes (px)
+
+18 / 12 / 14 /16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 
+/ 62 /74 / 86 / 98
+
+
+---07 SPACING SYSTEM
+
+/ 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 
+64 / 80 / 96 / 128 /
+*/
+
+
+
